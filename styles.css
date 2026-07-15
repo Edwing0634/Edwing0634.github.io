@@ -400,10 +400,11 @@ dl, dd { margin: 0; }
   min-width: 0;   /* evita que el contenido infle la card más allá del track del grid (overflow móvil) */
 }
 .proj:hover { border-color: color-mix(in oklab, var(--amber) 40%, var(--line)); transform: translateY(-3px); }
-.proj__top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.proj__top h3 { font-size: var(--step-2); }
+.proj__top { display: flex; align-items: flex-start; justify-content: space-between; gap: .7rem; flex-wrap: wrap; }
+.proj__top h3 { font-size: var(--step-2); min-width: 0; overflow-wrap: anywhere; }  /* el título cede, no empuja el badge fuera */
 .badge {
   display: inline-flex; align-items: center; gap: .45em; flex: none;
+  white-space: nowrap;   /* "en producción" nunca se parte ni ensancha la píldora */
   font-family: var(--f-mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .05em;
   padding: .35em .7em; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-dim);
 }

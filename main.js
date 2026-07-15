@@ -104,23 +104,30 @@
         el.dataset.revealed = "1";
       }
     });
-    // El resto entra al hacer scroll.
+    // Garantiza el estado final aunque la transición de opacity se congele
+    // en el compositor (móvil gama baja / webview). Sin esto, un elemento
+    // revelado puede quedarse a MEDIA opacidad (pálido) para siempre.
+    const settle = (el) => { el.style.opacity = "1"; el.style.transform = "none"; };
+
+    // El resto entra al hacer scroll. Al revelar, blindamos ESE elemento:
+    // tras dar tiempo a la transición (0.7s), forzamos el estado final inline.
     const io = new IntersectionObserver((entries, obs) => {
       entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add("in"); obs.unobserve(e.target); }
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          obs.unobserve(e.target);
+          setTimeout(() => settle(e.target), 700);   // por si la transición se colgó a media opacidad
+        }
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     revealEls.forEach(el => { if (!el.dataset.revealed) io.observe(el); });
 
-    // Red de seguridad DURA: la transición de opacity puede congelarse en el
-    // compositor (móvil gama baja / webview) y dejar el hero INVISIBLE aunque
-    // tenga la clase .in. A los 1.5s forzamos opacity/transform por estilo INLINE
-    // (gana a cualquier transición pendiente) — el contenido NUNCA queda oculto.
+    // Red de seguridad global (último recurso): si a los 3.5s algún reveal sigue
+    // sin dispararse (observer que nunca corrió), se muestra igual — el contenido
+    // NUNCA queda oculto. El blindaje principal es el settle() por-elemento de arriba.
     setTimeout(() => revealEls.forEach(el => {
-      el.classList.add("in");
-      el.style.opacity = "1";
-      el.style.transform = "none";
-    }), 1500);
+      if (!el.classList.contains("in")) { el.classList.add("in"); el.style.opacity = "1"; el.style.transform = "none"; }
+    }), 3500);
   }
 
   /* ---------------------------------------------------------
