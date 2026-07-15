@@ -88,8 +88,10 @@
      --------------------------------------------------------- */
   const revealEls = $$("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
+    // Sin animación: no tocar nada. El CSS ya deja todo visible (sin .js-anim).
     revealEls.forEach(el => el.classList.add("in"));
   } else {
+    // El modo animación (html.js-anim) ya lo activó el script del <head> sin flash.
     // Lo que ya está en viewport al cargar (hero) revela de inmediato,
     // escalonado — no espera a un scroll que quizá no ocurra.
     const vh = window.innerHeight;
@@ -110,9 +112,15 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     revealEls.forEach(el => { if (!el.dataset.revealed) io.observe(el); });
 
-    // Red de seguridad: nada debe quedar invisible por un observer que no dispara.
-    // Si a los 4s algo sigue oculto, se muestra igual.
-    setTimeout(() => revealEls.forEach(el => el.classList.add("in")), 4000);
+    // Red de seguridad DURA: la transición de opacity puede congelarse en el
+    // compositor (móvil gama baja / webview) y dejar el hero INVISIBLE aunque
+    // tenga la clase .in. A los 1.5s forzamos opacity/transform por estilo INLINE
+    // (gana a cualquier transición pendiente) — el contenido NUNCA queda oculto.
+    setTimeout(() => revealEls.forEach(el => {
+      el.classList.add("in");
+      el.style.opacity = "1";
+      el.style.transform = "none";
+    }), 1500);
   }
 
   /* ---------------------------------------------------------
