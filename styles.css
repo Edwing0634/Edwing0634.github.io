@@ -11,7 +11,7 @@
   --surface:       #1E1813;
   --surface-2:     #262019;
   --ink:           #F2ECE1;   /* texto cálido */
-  --ink-dim:       #9A8F80;   /* tenue */
+  --ink-dim:       #B8AE9E;   /* secundario legible — subido de #9A8F80 (contraste 5.96→8.64 sobre --bg, AA cómodo) */
   --ink-faint:     #6B6357;
   --line:          #332B22;   /* bordes */
 
@@ -491,7 +491,7 @@ html.js-anim [data-reveal].in { transform: none; }
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #F7F2E9; --bg-2: #F0E9DC; --surface: #FFFFFF; --surface-2: #F3ECE0;
-    --ink: #1A1510; --ink-dim: #6B6054; --ink-faint: #A99C8A; --line: #E3D8C6;
+    --ink: #1A1510; --ink-dim: #5A5044; --ink-faint: #A99C8A; --line: #E3D8C6;  /* --ink-dim subido de #6B6054 (5.50→7.06 sobre beige) */
     --amber: #E8630A; --amber-hi: #C85306; --amber-deep: #B84A05; --green: #2E9E45;
     --focus: #E8630A;
   }
