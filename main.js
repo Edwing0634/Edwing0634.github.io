@@ -104,10 +104,9 @@
         el.dataset.revealed = "1";
       }
     });
-    // Garantiza el estado final aunque la transición de opacity se congele
-    // en el compositor (móvil gama baja / webview). Sin esto, un elemento
-    // revelado puede quedarse a MEDIA opacidad (pálido) para siempre.
-    const settle = (el) => { el.style.opacity = "1"; el.style.transform = "none"; };
+    // Garantiza la posición final aunque la transición se congele. Ya NO tocamos
+    // opacity (el reveal no la anima; el texto siempre está a 1). Solo el transform.
+    const settle = (el) => { el.style.transform = "none"; };
 
     // El resto entra al hacer scroll. Al revelar, blindamos ESE elemento:
     // tras dar tiempo a la transición (0.7s), forzamos el estado final inline.
@@ -126,7 +125,7 @@
     // sin dispararse (observer que nunca corrió), se muestra igual — el contenido
     // NUNCA queda oculto. El blindaje principal es el settle() por-elemento de arriba.
     setTimeout(() => revealEls.forEach(el => {
-      if (!el.classList.contains("in")) { el.classList.add("in"); el.style.opacity = "1"; el.style.transform = "none"; }
+      if (!el.classList.contains("in")) { el.classList.add("in"); el.style.transform = "none"; }
     }), 3500);
   }
 

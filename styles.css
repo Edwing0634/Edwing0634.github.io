@@ -464,12 +464,14 @@ dl, dd { margin: 0; }
 /* ============================================================
    REVEAL al scroll (IntersectionObserver añade .in)
    ============================================================ */
-/* BLINDAJE: el contenido arranca VISIBLE por defecto. Solo se oculta-para-animar
-   si el JS confirma que puede animar (añade .js-anim a <html>). Así, sin JS, con el
-   compositor congelado o en el móvil más malo, el texto SIEMPRE está. La animación
-   es puramente ADITIVA. Ver decisión Edwin 2026-07-15 (pantalla en negro = inaceptable). */
-html.js-anim [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease-out), transform .6s var(--ease-out); }
-html.js-anim [data-reveal].in { opacity: 1; transform: none; }
+/* BLINDAJE DEFINITIVO: el reveal anima SOLO deslizamiento (translateY), NUNCA opacity.
+   El texto está a opacity:1 desde el primer frame — jamás baja. Animar opacity se
+   congelaba en Safari iOS y dejaba texto pálido/invisible (el settle() por JS no
+   basta porque Safari no repinta). Si el deslizamiento se congela, el elemento
+   queda en su sitio a plena opacidad: cero riesgo de pantalla/texto en negro.
+   Ver decisión Edwin 2026-07-15. */
+html.js-anim [data-reveal] { transform: translateY(16px); transition: transform .55s var(--ease-out); }
+html.js-anim [data-reveal].in { transform: none; }
 
 /* ============================================================
    REDUCED MOTION — todo se calma, nada se pierde
