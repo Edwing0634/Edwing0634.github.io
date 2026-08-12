@@ -1,335 +1,184 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edwin González — Ingeniero de asistentes de IA</title>
-  <meta name="description" content="Un asistente de IA que contesta WhatsApp, Instagram y Facebook solo. Corre en un PC de mi casa y cuesta $0 al mes. Escríbele y compruébalo tú mismo.">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://edwing0634.github.io/">
-  <meta property="og:title" content="Edwin González — Ingeniero de IA">
-  <meta property="og:description" content="Un asistente de IA que contesta WhatsApp, Instagram y Facebook solo. Corre en un PC de mi casa, $0 al mes. Escríbele y compruébalo.">
-  <meta property="og:image" content="https://edwing0634.github.io/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="es_CO">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Edwin González — Ingeniero de IA">
-  <meta name="twitter:description" content="Un asistente de IA que contesta WhatsApp, Instagram y Facebook solo. Corre en un PC de mi casa, $0 al mes.">
-  <meta name="twitter:image" content="https://edwing0634.github.io/og.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Edwin González: ingeniería de soluciones con IA, automatización y datos.">
+  <title>Edwin González · Ingeniería de soluciones</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
-  <script>
-    /* Activa el modo animación ANTES de pintar el body, sin flash — pero solo si
-       el navegador respeta movimiento. Si este script falla o no corre, el
-       contenido queda visible por defecto (blindaje anti-pantalla-negra). */
-    try {
-      if (!matchMedia('(prefers-reduced-motion: reduce)').matches
-          && 'IntersectionObserver' in window) {
-        document.documentElement.classList.add('js-anim');
-      }
-    } catch (e) { /* cualquier error → sin js-anim → todo visible */ }
-  </script>
 </head>
 <body>
-
-  <!-- Skip link (a11y) -->
-  <a href="#prueba" class="skip-link">Saltar a la demo</a>
-
-  <!-- Ambient heat glow — la firma. Respira detrás del hero. -->
-  <div class="heat-field" aria-hidden="true"></div>
-
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="opening" aria-hidden="true">
+    <span class="opening__line"></span>
+    <span class="opening__signal" aria-hidden="true"></span>
+    <p>El problema <em>primero.</em></p>
+  </div>
   <header class="topbar">
-    <div class="wrap topbar__inner">
-      <span class="mark">EG<span class="mark__dot">.</span></span>
-      <nav class="topnav" aria-label="Secciones">
-        <a href="#prueba">La demo</a>
-        <a href="#capacidades">Qué construyo</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto" class="topnav__cta">Hablemos</a>
-      </nav>
-    </div>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">EG.</a>
+      <a href="#metodo">Método</a>
+      <a href="#aira">AIRA</a>
+      <a href="#casos">Casos</a>
+      <a href="#contacto">Hablemos</a>
+    </nav>
   </header>
+  <main id="contenido">
+    <section id="inicio" class="hero chapter" aria-labelledby="inicio-titulo">
+      <div class="hero__copy">
+        <p class="eyebrow">Ingeniería de soluciones · IA, automatización y datos</p>
+        <h1 id="inicio-titulo" data-reveal>Entiendo el problema.<br>Diseño el sistema.<br><em>Mido el resultado.</em></h1>
+        <p>No parto de una herramienta. Analizo el proceso y construyo la solución adecuada —IA, automatización, datos o software— para llevarla a producción.</p>
+        <p class="chapter__code chapter__code--act" data-reveal>ACTO I / EL CRITERIO</p>
+        <p><a href="#casos">Ver problemas resueltos</a> <a href="#aira">Hablar con AIRA</a></p>
+      </div>
+      <div class="signal-field" aria-hidden="true">
+        <span class="signal-grid"></span>
+        <div class="signal-target">
+          <div class="focus-rings" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+        <span class="signal-scan"></span>
+      </div>
+      <ul class="capabilities" aria-label="Capacidades principales">
+        <li>Automatización</li>
+        <li>IA aplicada</li>
+        <li>Datos + software</li>
+      </ul>
+    </section>
 
-  <main>
+    <section id="metodo" class="method chapter" aria-labelledby="metodo-titulo">
+      <p class="chapter__code">EL MÉTODO</p>
+      <h2 id="metodo-titulo" data-reveal>La herramienta viene después del diagnóstico.</h2>
+      <p class="method__intro">Un problema bien entendido evita automatizar fricción y convierte la tecnología en una decisión con propósito.</p>
+      <ol class="method__steps">
+        <li><span class="method__copy"><strong>Entender.</strong> Aclaro el proceso, las personas y la decisión que importa.</span></li>
+        <li><span class="method__copy"><strong>Decidir.</strong> Priorizo la solución que reduce fricción y sostiene el objetivo.</span></li>
+        <li><span class="method__copy"><strong>Construir.</strong> Integro IA, automatización, datos o software cuando aportan valor real.</span></li>
+        <li><span class="method__copy"><strong>Medir.</strong> Dejo el sistema listo para observar, aprender y mejorar.</span></li>
+      </ol>
+      <span class="method__connector" aria-hidden="true"></span>
+    </section>
 
-    <!-- ============ HERO — C manda ============ -->
-    <section class="hero" id="inicio">
-      <div class="wrap hero__inner">
-        <p class="eyebrow" data-reveal>
-          <span class="eyebrow__pulse" aria-hidden="true"></span>
-          Ingeniero de IA &amp; automatización · en producción
-        </p>
-
-        <h1 class="hero__title" data-reveal>
-          Un asistente de IA que contesta WhatsApp,
-          Instagram y Facebook <em>solo</em>.
-          Corre en un PC de mi casa. Cuesta
-          <span class="cost">
-            <span class="cost__glow" aria-hidden="true"></span>
-            <span class="cost__num" data-costnum>$0</span>
+    <section id="aira" class="aira chapter" aria-labelledby="aira-titulo">
+      <p class="chapter__code chapter__code--act" data-reveal>ACTO II / LA PRUEBA</p>
+      <h2 id="aira-titulo" data-reveal>No te lo cuento. Habla con AIRA.</h2>
+      <div class="aira__phone" data-reveal aria-label="Demostración de conversación con AIRA">
+        <span class="aira__trace" aria-hidden="true"></span>
+        <p class="aira__status"><span aria-hidden="true">●</span> Demostración disponible</p>
+        <p class="aira__message">Hola. Puedo contarte cómo trabaja Edwin o ayudarte a explorar un problema de tu empresa. ¿Qué te trae por aquí?</p>
+        <p class="aira__signals">Producción · RAG · voz local · multicanal · compliance</p>
+      </div>
+      <div class="aira__routes" aria-label="Elige una ruta para conversar con AIRA">
+        <a data-wa-route="work" href="https://wa.me/573022309119?text=Hola%20AIRA%2C%20vengo%20del%20portafolio%20de%20Edwin%20y%20quiero%20conocer%20c%C3%B3mo%20trabaja%2C%20sus%20proyectos%20y%20las%20soluciones%20que%20desarrolla." class="wa-cta">
+          <span class="wa-cta__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M20 11.5a8 8 0 0 1-11.9 7L4 19.5l1.1-4A8 8 0 1 1 20 11.5Z"></path>
+              <path d="M8.2 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.9.9c.3.1.4.3.4.5 0 .4-.2 1.3-.8 1.8-.5.5-1.3.8-2.2.6-1.2-.2-2.9-.8-4.6-2.3-1.4-1.3-2.4-2.9-2.7-4.2-.3-1 .1-1.8.4-2.2.4-.4.8-.6 1.2-.6Z"></path>
+            </svg>
           </span>
-          al mes.
-        </h1>
+          <span class="wa-cta__copy">
+            <span class="wa-cta__label">Conocer el trabajo de Edwin</span>
+            <span class="wa-cta__meta">Trayectoria</span>
+          </span>
+          <span class="wa-cta__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a data-wa-route="business" href="https://wa.me/573022309119?text=Hola%20AIRA%2C%20vengo%20del%20portafolio%20de%20Edwin%20y%20quiero%20conversar%20sobre%20un%20proceso%20que%20necesito%20mejorar%20o%20automatizar." class="wa-cta">
+          <span class="wa-cta__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M20 11.5a8 8 0 0 1-11.9 7L4 19.5l1.1-4A8 8 0 1 1 20 11.5Z"></path>
+              <path d="M8.2 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.9.9c.3.1.4.3.4.5 0 .4-.2 1.3-.8 1.8-.5.5-1.3.8-2.2.6-1.2-.2-2.9-.8-4.6-2.3-1.4-1.3-2.4-2.9-2.7-4.2-.3-1 .1-1.8.4-2.2.4-.4.8-.6 1.2-.6Z"></path>
+            </svg>
+          </span>
+          <span class="wa-cta__copy">
+            <span class="wa-cta__label">Quiero automatizar un proceso</span>
+            <span class="wa-cta__meta">Servicios</span>
+          </span>
+          <span class="wa-cta__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
 
-        <p class="hero__sub" data-reveal>
-          Con memoria, criterio y candados contra alucinaciones.
-          No te lo cuento con un video: te dejo escribirle al mío
-          y comprobarlo tú.
-        </p>
+    <section id="casos" class="cases chapter" aria-labelledby="casos-titulo">
+      <p class="chapter__code chapter__code--act" data-reveal>ACTO III / LA EVIDENCIA</p>
+      <h2 id="casos-titulo" data-reveal>Tres problemas. Tres decisiones distintas.</h2>
+      <article class="case case--operations">
+        <p class="case__meta"><span class="case__index">CASO / 01</span><span class="case__domain">OPERACIONES</span></p>
+        <h3>Conectar antes de exigir más.</h3>
+        <p><strong>Problema:</strong> procesos manuales y fragmentados entre equipos y canales.</p>
+        <p><strong>Decisión:</strong> conectar el flujo antes de pedir más trabajo a las personas.</p>
+        <p><strong>Sistema construido:</strong> automatización, APIs y campañas multicanal.</p>
+        <p><strong>Resultado:</strong> una operación más trazable y preparada para escalar.</p>
+      </article>
+      <article class="case case--decisions">
+        <p class="case__meta"><span class="case__index">CASO / 02</span><span class="case__domain">DECISIONES</span></p>
+        <h3>Convertir datos en contexto.</h3>
+        <p><strong>Problema:</strong> datos dispersos que retrasan la lectura del negocio.</p>
+        <p><strong>Decisión:</strong> convertir datos aislados en información disponible para decidir.</p>
+        <p><strong>Sistema construido:</strong> ETL, Power BI y modelos predictivos.</p>
+        <p><strong>Resultado:</strong> una base compartida para analizar y priorizar con contexto.</p>
+      </article>
+      <article class="case case--product">
+        <p class="case__meta"><span class="case__index">CASO / 03</span><span class="case__domain">PRODUCTO</span></p>
+        <h3>Resolverlo como sistema.</h3>
+        <p><strong>Problema:</strong> necesidad de una experiencia financiera integral.</p>
+        <p><strong>Decisión:</strong> resolverlo como producto, no como herramientas desconectadas.</p>
+        <p><strong>Sistema construido:</strong> DataFinSolutions con SaaS, pagos, IA y seguridad.</p>
+        <p><strong>Resultado:</strong> una plataforma que reúne las capacidades necesarias en un solo sistema.</p>
+      </article>
+    </section>
 
-        <div class="hero__actions" data-reveal>
-          <a href="#prueba" class="btn btn--primary">
-            <span class="btn__arrow" aria-hidden="true">↓</span>
-            Escríbele y compruébalo
+    <section id="contacto" class="contact chapter" aria-labelledby="contacto-titulo">
+      <div class="contact__thesis">
+        <p class="chapter__code chapter__code--act" data-reveal>ACTO IV / LA OPORTUNIDAD</p>
+        <h2 id="contacto-titulo" data-reveal>Tu proceso puede ser la siguiente señal.</h2>
+        <p>Conoce cómo pienso y construyo, o trae un proceso que necesite claridad, automatización o una solución completa.</p>
+      </div>
+      <div class="contact__routes contact__options">
+        <article class="contact__card contact__card--career">
+          <h3>Conoce cómo trabajo</h3>
+          <p>Explora mis proyectos y capacidades.</p>
+          <p>Conoce mi criterio y la clase de soluciones que construyo para problemas reales.</p>
+          <div class="contact__actions">
+            <a href="#casos">Ver proyectos y soluciones</a>
+            <a href="https://github.com/Edwing0634" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:edwing0634@gmail.com">Correo profesional</a>
+            <a data-wa-route="work" href="https://wa.me/573022309119?text=Hola%20AIRA%2C%20vengo%20del%20portafolio%20de%20Edwin%20y%20quiero%20conocer%20c%C3%B3mo%20trabaja%2C%20sus%20proyectos%20y%20las%20soluciones%20que%20desarrolla." class="wa-cta">
+              <span class="wa-cta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M20 11.5a8 8 0 0 1-11.9 7L4 19.5l1.1-4A8 8 0 1 1 20 11.5Z"></path>
+                  <path d="M8.2 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.9.9c.3.1.4.3.4.5 0 .4-.2 1.3-.8 1.8-.5.5-1.3.8-2.2.6-1.2-.2-2.9-.8-4.6-2.3-1.4-1.3-2.4-2.9-2.7-4.2-.3-1 .1-1.8.4-2.2.4-.4.8-.6 1.2-.6Z"></path>
+                </svg>
+              </span>
+              <span class="wa-cta__copy">
+                <span class="wa-cta__label">Conocer el trabajo de Edwin</span>
+                <span class="wa-cta__meta">Trayectoria</span>
+              </span>
+              <span class="wa-cta__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+        <article class="contact__card contact__card--business">
+          <h3>Automatización y soluciones</h3>
+          <p>Tengo un proceso por mejorar.</p>
+          <p>Conversemos con AIRA para entender el problema y definir la solución adecuada antes de construir.</p>
+          <a data-wa-route="business" href="https://wa.me/573022309119?text=Hola%20AIRA%2C%20vengo%20del%20portafolio%20de%20Edwin%20y%20quiero%20conversar%20sobre%20un%20proceso%20que%20necesito%20mejorar%20o%20automatizar." class="wa-cta">
+            <span class="wa-cta__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M20 11.5a8 8 0 0 1-11.9 7L4 19.5l1.1-4A8 8 0 1 1 20 11.5Z"></path>
+                <path d="M8.2 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.9.9c.3.1.4.3.4.5 0 .4-.2 1.3-.8 1.8-.5.5-1.3.8-2.2.6-1.2-.2-2.9-.8-4.6-2.3-1.4-1.3-2.4-2.9-2.7-4.2-.3-1 .1-1.8.4-2.2.4-.4.8-.6 1.2-.6Z"></path>
+              </svg>
+            </span>
+            <span class="wa-cta__copy">
+              <span class="wa-cta__label">Quiero automatizar un proceso</span>
+              <span class="wa-cta__meta">Servicios</span>
+            </span>
+            <span class="wa-cta__arrow" aria-hidden="true">↗</span>
           </a>
-          <a href="#capacidades" class="btn btn--ghost">Cómo está hecho</a>
-        </div>
-
-        <!-- La tira de datos duros, en mono. B empieza a sostener desde el hero. -->
-        <dl class="specstrip" data-reveal aria-label="Datos técnicos">
-          <div class="specstrip__item">
-            <dt>Coste de infraestructura</dt>
-            <dd class="mono"><span data-count="0" data-suffix="">$0</span><span class="specstrip__unit">/mes</span></dd>
-          </div>
-          <div class="specstrip__item">
-            <dt>Hardware</dt>
-            <dd class="mono">1 GPU de casa</dd>
-          </div>
-          <div class="specstrip__item">
-            <dt>Transcribe una nota de voz en</dt>
-            <dd class="mono"><span data-count="2" data-suffix="s">2s</span></dd>
-          </div>
-          <div class="specstrip__item">
-            <dt>Clasificador de compliance</dt>
-            <dd class="mono"><span data-count="27" data-suffix="/27">27/27</span> <span class="ok" aria-hidden="true">✓</span></dd>
-          </div>
-        </dl>
-      </div>
-
-      <div class="hero__scrollcue" aria-hidden="true">
-        <span></span>
+        </article>
       </div>
     </section>
-
-
-    <!-- ============ PRUEBA — A remata. El chat vivo. El aha. ============ -->
-    <section class="proof" id="prueba">
-      <div class="wrap proof__inner">
-        <div class="proof__intro" data-reveal>
-          <p class="section-kicker mono">// la prueba, no la promesa</p>
-          <h2 class="section-title">Escríbele. Contesta solo.</h2>
-          <p class="section-lead">
-            Abajo hay una conversación real con mi asistente. Léela — y cuando quieras
-            dejar de leer y probarlo tú, el botón abre un WhatsApp de verdad.
-            Nadie del otro lado. Solo el asistente.
-          </p>
-        </div>
-
-        <!-- Teléfono / chat -->
-        <div class="phone" data-reveal>
-          <div class="phone__notch" aria-hidden="true"></div>
-          <div class="phone__head">
-            <div class="phone__avatar" aria-hidden="true">
-              <span>ai</span>
-            </div>
-            <div class="phone__who">
-              <strong>Asistente de Edwin</strong>
-              <span class="phone__status"><i aria-hidden="true"></i> en línea · responde solo</span>
-            </div>
-          </div>
-
-          <div class="chat" id="chat" aria-label="Conversación de ejemplo con el asistente" role="log">
-            <!-- Los mensajes se inyectan con JS para animar el 'escribiendo…'.
-                 Fallback sin-JS: se muestran igual (ver <noscript> y CSS). -->
-          </div>
-
-          <noscript>
-            <div class="chat chat--static">
-              <div class="msg msg--in"><p>¡Hola! ¿Qué es lo que haces exactamente?</p></div>
-              <div class="msg msg--out"><p>Contesto tus mensajes de WhatsApp, Instagram y Facebook solo — 24/7. Entiendo lo que te preguntan, busco la respuesta en tu propia información y respondo como lo harías tú.</p></div>
-              <div class="msg msg--in"><p>¿Y si no sabes algo? No quiero que invente.</p></div>
-              <div class="msg msg--out"><p>Tengo un candado de dos capas contra eso: si no está en tus datos, no me lo invento — te aviso y paso la conversación a un humano. Prefiero decir "no sé" a inventar.</p></div>
-            </div>
-          </noscript>
-
-          <!-- CTA controlado por el flag PORTFOLIO_DEMO_LIVE en main.js.
-               Sin href directo: el enlace a WhatsApp lo cablea el JS SOLO cuando
-               el ruteo de AIRA sabe distinguir la seña del portafolio. Hasta
-               entonces muestra "demo en preparación" y NO abre la línea de ventas. -->
-          <a class="phone__cta" data-wa="demo" role="button" tabindex="0" aria-disabled="true">
-            <svg class="phone__cta-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m4.52 9.64c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01a.92.92 0 0 0-.67.31c-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.16 1.78 2.71 4.3 3.8.6.26 1.07.42 1.44.53.6.2 1.15.17 1.58.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.07.15-1.18-.06-.11-.23-.17-.48-.29"/></svg>
-            <span data-wa-label>Escríbele tú mismo</span>
-            <span class="phone__cta-num mono">+57 302 230 9119</span>
-          </a>
-          <p class="phone__hint">Le escribes a mi asistente real por WhatsApp. Te habla de mi trabajo y de cómo está hecho. <em>Envíalo tal cual para que sepa que vienes de aquí.</em></p>
-        </div>
-
-        <p class="proof__foot" data-reveal>
-          Es el mismo motor que corre en producción para <strong>DataFinSolutions</strong>.
-          Si conversa contigo aquí, conversa con tus clientes allá.
-        </p>
-      </div>
-    </section>
-
-
-    <!-- ============ CAPACIDADES — B sostiene ============ -->
-    <section class="caps" id="capacidades">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <p class="section-kicker mono">// qué hay bajo el capó</p>
-          <h2 class="section-title">No es un chatbot. Es un sistema.</h2>
-          <p class="section-lead">
-            Cualquiera conecta una API y la llama "IA". La diferencia está en lo que pasa
-            cuando el modelo se equivoca, cuando llega un audio, cuando hay que decidir
-            si algo se puede responder o no. Ahí es donde vive la ingeniería.
-          </p>
-        </div>
-
-        <div class="capgrid">
-          <article class="cap" data-reveal>
-            <div class="cap__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16M4 12h16M4 19h10"/><circle cx="19" cy="19" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-            </div>
-            <h3>Responde con <em>tu</em> información, no con la de internet</h3>
-            <p>RAG sobre tu propia base de conocimiento: precios, políticas, catálogo. El asistente contesta lo que <em>tú</em> sabes, no lo que el modelo imagina.</p>
-          </article>
-
-          <article class="cap cap--flag" data-reveal>
-            <div class="cap__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></svg>
-            </div>
-            <h3>Candado anti-alucinación de dos capas</h3>
-            <p>Si la respuesta no está respaldada por tus datos, el asistente no la inventa: lo dice y escala a un humano. Prefiere el "no sé" honesto al error convincente.</p>
-          </article>
-
-          <article class="cap" data-reveal>
-            <div class="cap__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 4v10M12 4a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V7a3 3 0 0 0-3-3z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6 11a6 6 0 0 0 12 0M12 17v3M9 20h6"/></svg>
-            </div>
-            <h3>Entiende notas de voz en <span class="mono">2&nbsp;segundos</span></h3>
-            <p>Transcripción local, sin mandar el audio de tus clientes a un tercero. Rápido y privado, en el mismo PC donde vive todo lo demás.</p>
-          </article>
-
-          <article class="cap" data-reveal>
-            <div class="cap__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3 9h18M8 21h8M12 18v3"/><path fill="currentColor" d="m10 11.5 4 2-4 2z"/></svg>
-            </div>
-            <h3>Fábrica de reels que se publica sola</h3>
-            <p>Genera la imagen, la voz, los subtítulos y publica el video — de principio a fin, sin que nadie toque un editor. La automatización que la mayoría hace a mano.</p>
-          </article>
-
-          <article class="cap" data-reveal>
-            <div class="cap__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-            </div>
-            <h3>Clasificador de compliance <span class="mono">27/27</span></h3>
-            <p>Decide qué mensajes puede responder y cuáles no debe tocar, con acierto verificado en las 27 categorías de prueba. Criterio, no adivinanza.</p>
-          </article>
-
-          <article class="cap cap--cost" data-reveal>
-            <div class="cap__ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 7v10M14.5 9.3c0-1.1-1.1-1.8-2.5-1.8s-2.5.8-2.5 2 1.1 1.6 2.5 1.8 2.5.7 2.5 1.9-1.1 2-2.5 2-2.5-.8-2.5-1.9"/></svg>
-            </div>
-            <h3>Todo esto por <span class="mono cost-inline">$0/mes</span></h3>
-            <p>Sin nube que pagar, sin tokens de API que se acumulen. Corre en una sola GPU de casa. La ingeniería está en hacerlo <em>rendir</em>, no en gastar.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============ PROYECTOS ============ -->
-    <section class="projects" id="proyectos">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <p class="section-kicker mono">// software que corre de verdad</p>
-          <h2 class="section-title">Dos productos, no dos demos.</h2>
-        </div>
-
-        <div class="projgrid">
-          <article class="proj proj--live" data-reveal>
-            <div class="proj__top">
-              <h3>AIRA</h3>
-              <span class="badge badge--live"><i aria-hidden="true"></i> en producción</span>
-            </div>
-            <p class="proj__desc">
-              El asistente que acabas de probar. Atiende WhatsApp, Instagram y Facebook
-              sin intervención humana: entiende, busca, decide y responde. Con memoria de
-              la conversación y candados para no inventar. Todo autoalojado, coste cero.
-            </p>
-            <ul class="proj__stack mono" aria-label="Tecnologías">
-              <li>RAG</li><li>Voz local</li><li>Compliance 27/27</li><li>Multi-canal</li><li>$0/mes</li>
-            </ul>
-            <div class="proj__links">
-              <a data-wa="demo" role="button" tabindex="0" class="link-arrow"><span data-wa-label>Probar el asistente</span> <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="proj proj--live" data-reveal>
-            <div class="proj__top">
-              <h3>DataFinSolutions</h3>
-              <span class="badge badge--live"><i aria-hidden="true"></i> en producción</span>
-            </div>
-            <p class="proj__desc">
-              SaaS fintech real, con clientes de pago. Cobros integrados, generación de
-              PDFs, almacenamiento en la nube y prácticas de seguridad OWASP de punta a
-              punta. De la pasarela de pago al reporte descargable, construido y operado por mí.
-            </p>
-            <ul class="proj__stack mono" aria-label="Tecnologías">
-              <li>Pagos</li><li>IA</li><li>PDFs</li><li>Almacenamiento R2</li><li>OWASP</li>
-            </ul>
-            <div class="proj__links">
-              <a href="https://github.com/Edwing0634/fintech-saas-platform" target="_blank" rel="noopener" class="link-arrow">Ver el código de muestra <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ============ CONTACTO ============ -->
-    <section class="contact" id="contacto">
-      <div class="wrap contact__inner" data-reveal>
-        <p class="section-kicker mono">// tu turno</p>
-        <h2 class="contact__title">
-          ¿Tienes un WhatsApp que no da abasto?
-        </h2>
-        <p class="contact__lead">
-          Si atender mensajes te come el día — o si buscas a alguien que construya esto
-          de punta a punta — hablemos. La forma más rápida de entender lo que hago es
-          escribirle al asistente. Contesta él; luego contesto yo.
-        </p>
-        <div class="contact__actions">
-          <a data-wa="demo" role="button" tabindex="0" class="btn btn--primary btn--lg">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.52 11.31c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01a.92.92 0 0 0-.67.31c-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.16 1.78 2.71 4.3 3.8.6.26 1.07.42 1.44.53.6.2 1.15.17 1.58.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.07.15-1.18-.06-.11-.23-.17-.48-.29"/></svg>
-            <span data-wa-label>Escribir al asistente</span>
-          </a>
-          <a href="mailto:edwing0634@gmail.com" class="btn btn--ghost btn--lg">Escribirme por correo</a>
-        </div>
-      </div>
-    </section>
-
   </main>
-
-  <footer class="foot">
-    <div class="wrap foot__inner">
-      <span class="mark">EG<span class="mark__dot">.</span></span>
-      <p class="foot__line">Edwin González · Ingeniero de IA &amp; automatización · Colombia</p>
-      <nav class="foot__links" aria-label="Enlaces">
-        <a href="https://github.com/Edwing0634" target="_blank" rel="noopener">GitHub</a>
-        <a data-wa="footer" role="button" tabindex="0">WhatsApp</a>
-        <a href="mailto:edwing0634@gmail.com">Correo</a>
-      </nav>
-    </div>
-  </footer>
-
+  <footer><p>Edwin González · Ingeniería de soluciones · Colombia</p></footer>
   <script src="main.js" defer></script>
 </body>
 </html>
